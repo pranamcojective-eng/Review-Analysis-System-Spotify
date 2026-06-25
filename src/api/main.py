@@ -24,11 +24,6 @@ _pipeline_result: PipelineResult | None = None
 _pipeline: ReviewDiscoveryPipeline | None = None
 
 
-class SearchRequest(BaseModel):
-    query: str
-    k: int = 5
-
-
 class ChatRequest(BaseModel):
     question: str
     top_k: int = 5
@@ -45,7 +40,6 @@ def root():
             "GET /insights/clusters": "Get theme clusters",
             "GET /insights/sentiment": "Get sentiment distribution",
             "GET /insights/quotes": "Get sample quotes",
-            "POST /search": "Semantic search similar reviews",
             "POST /chat": "Ask a question about the review dataset",
             "GET /health": "Health check",
         },
@@ -114,15 +108,6 @@ def get_quotes():
     if not _pipeline_result:
         raise HTTPException(status_code=404, detail="Run pipeline first")
     return _pipeline_result.report.sample_quotes
-
-
-@app.post("/search")
-def semantic_search(req: SearchRequest):
-    if not _pipeline or not _pipeline.vector_store:
-        raise HTTPException(status_code=404, detail="Run pipeline first to build vector index")
-    embedding = _pipeline.embedding_service.encode([req.query])
-    results = _pipeline.vector_store.search(embedding[0], k=req.k)
-    return {"query": req.query, "results": results}
 
 
 @app.post("/chat")

@@ -1,6 +1,5 @@
 """Streamlit dashboard for the Review Discovery Engine."""
 
-import json
 import sys
 from pathlib import Path
 
@@ -66,7 +65,7 @@ if not st.session_state.result:
     | **Ingestion** | Load reviews from App Store, Play Store, Reddit, Twitter (mock data) |
     | **Processing** | Clean text, remove emojis/noise, deduplicate |
     | **LLM Analysis** | Classify, extract sentiment, intent, themes (GPT-4 or rule-based fallback) |
-    | **Embeddings + FAISS** | Vectorize reviews, cluster themes, enable semantic search |
+    | **Embeddings + FAISS** | Vectorize reviews and cluster themes |
     | **Insights** | Generate structured report with top struggles, segments, quotes |
     """)
     st.stop()
@@ -74,13 +73,11 @@ if not st.session_state.result:
 result = st.session_state.result
 report = result.report
 
-tab1, tab_chat, tab2, tab3, tab4, tab5 = st.tabs([
+tab1, tab_chat, tab2, tab3 = st.tabs([
     "📊 Overview",
     "💭 Ask About Reviews",
     "🏷️ Theme Clusters",
     "💬 Quotes",
-    "🔍 Semantic Search",
-    "📋 Pipeline Logs",
 ])
 
 with tab1:
@@ -149,7 +146,7 @@ with tab_chat:
     st.subheader("Ask About the Review Dataset")
     st.caption(
         "Type a question and get answers grounded in user reviews. "
-        "The chat retrieves relevant feedback via semantic search, then synthesizes a response."
+        "The chat retrieves relevant feedback, then synthesizes a response."
     )
 
     for message in st.session_state.chat_history:
@@ -218,26 +215,3 @@ with tab3:
         )
         st.markdown(f"> {quote['text']}")
         st.divider()
-
-with tab4:
-    st.subheader("Semantic Search (FAISS)")
-    query = st.text_input("Search similar feedback", placeholder="e.g. algorithm plays same songs")
-    if query and st.session_state.pipeline and st.session_state.pipeline.vector_store:
-        embedding = st.session_state.pipeline.embedding_service.encode([query])
-        results = st.session_state.pipeline.vector_store.search(embedding[0], k=5)
-        for r in results:
-            st.markdown(f"**Score: {r['score']:.3f}** — `{r['id']}`")
-            st.markdown(f"> {r['text']}")
-            st.divider()
-
-with tab5:
-    st.subheader("Pipeline Execution Log")
-    for entry in result.log_entries:
-        st.text(entry)
-
-    st.subheader("Intermediate Outputs")
-    output_dir = PROJECT_ROOT / "output"
-    if output_dir.exists():
-        for f in sorted(output_dir.glob("*.json")):
-            with st.expander(f.name):
-                st.json(json.loads(f.read_text(encoding="utf-8")))
