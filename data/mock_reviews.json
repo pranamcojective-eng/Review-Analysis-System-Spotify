@@ -1,0 +1,170 @@
+[
+  {
+    "id": "as_001",
+    "source": "app_store",
+    "text": "Spotify keeps playing the same 20 songs on my Discover Weekly 😤 I want NEW artists not the same indie pop over and over!!",
+    "rating": 2.0,
+    "author": "musiclover99",
+    "timestamp": "2025-11-15T10:30:00Z"
+  },
+  {
+    "id": "as_002",
+    "source": "app_store",
+    "text": "Love the app but finding new music is impossible. Daily Mix is just my old favorites recycled.",
+    "rating": 3.0,
+    "author": "jazzfan",
+    "timestamp": "2025-11-20T14:22:00Z"
+  },
+  {
+    "id": "as_003",
+    "source": "app_store",
+    "text": "Best music app ever! Discover Weekly introduced me to amazing artists I never would have found 🎵✨",
+    "rating": 5.0,
+    "author": "happy_user",
+    "timestamp": "2025-12-01T09:15:00Z"
+  },
+  {
+    "id": "as_004",
+    "source": "app_store",
+    "text": "The UI is cluttered. Can't figure out where to find mood playlists. Took me 10 minutes to find chill vibes.",
+    "rating": 2.0,
+    "author": "ux_critic",
+    "timestamp": "2025-12-05T16:45:00Z"
+  },
+  {
+    "id": "ps_001",
+    "source": "play_store",
+    "text": "Recommendations are terrible lately. I listen to metal and keep getting pop suggestions. Algorithm is broken.",
+    "rating": 1.0,
+    "author": "metalhead42",
+    "timestamp": "2025-11-18T08:00:00Z"
+  },
+  {
+    "id": "ps_002",
+    "source": "play_store",
+    "text": "Radio feature plays same songs on repeat. Bored of hearing the same tracks every day.",
+    "rating": 2.0,
+    "author": "bored_listener",
+    "timestamp": "2025-11-25T19:30:00Z"
+  },
+  {
+    "id": "ps_003",
+    "source": "play_store",
+    "text": "Release Radar is fire! Always shows me new releases from artists I follow. Keep it up!",
+    "rating": 5.0,
+    "author": "early_adopter",
+    "timestamp": "2025-12-02T11:00:00Z"
+  },
+  {
+    "id": "ps_004",
+    "source": "play_store",
+    "text": "Wish there was a better way to discover music by mood. Sometimes I want sad songs, sometimes workout energy.",
+    "rating": 3.0,
+    "author": "mood_seeker",
+    "timestamp": "2025-12-08T07:20:00Z"
+  },
+  {
+    "id": "rd_001",
+    "source": "reddit",
+    "text": "Anyone else feel like Spotify's algorithm has gotten worse? My Discover Weekly is 80% songs I already know.",
+    "rating": null,
+    "author": "r/spotify_user",
+    "timestamp": "2025-11-22T20:15:00Z"
+  },
+  {
+    "id": "rd_002",
+    "source": "reddit",
+    "text": "Pro tip: use the 'Don't play this artist' feature when you get bad recommendations. Game changer for discovery.",
+    "rating": null,
+    "author": "r/musicdiscovery",
+    "timestamp": "2025-11-28T13:40:00Z"
+  },
+  {
+    "id": "rd_003",
+    "source": "reddit",
+    "text": "I miss when Spotify actually pushed me outside my comfort zone. Now it just feeds me more of the same genre.",
+    "rating": null,
+    "author": "r/explorer",
+    "timestamp": "2025-12-03T18:55:00Z"
+  },
+  {
+    "id": "rd_004",
+    "source": "reddit",
+    "text": "The search function is confusing. Hard to find playlists for specific activities like studying or running.",
+    "rating": null,
+    "author": "r/spotifyhelp",
+    "timestamp": "2025-12-10T09:30:00Z"
+  },
+  {
+    "id": "tw_001",
+    "source": "twitter",
+    "text": "@Spotify why does my Wrapped playlist sound exactly like last year?? I need fresh music not nostalgia loops",
+    "rating": null,
+    "author": "@tiredofsame",
+    "timestamp": "2025-12-01T15:00:00Z"
+  },
+  {
+    "id": "tw_002",
+    "source": "twitter",
+    "text": "@Spotify Daily Mix 1 has been the same 15 songs for 3 weeks. Fix your recommendation engine pls",
+    "rating": null,
+    "author": "@algo_broken",
+    "timestamp": "2025-12-04T22:10:00Z"
+  },
+  {
+    "id": "tw_003",
+    "source": "twitter",
+    "text": "Shoutout to @Spotify Blend feature - finally discovering music through friends! More social discovery please 🙌",
+    "rating": null,
+    "author": "@social_listener",
+    "timestamp": "2025-12-06T12:30:00Z"
+  },
+  {
+    "id": "tw_004",
+    "source": "twitter",
+    "text": "Spotify needs better mood-based playlists. 'Chill' playlist has EDM bangers. Where's actual relaxing music?",
+    "rating": null,
+    "author": "@mood_mismatch",
+    "timestamp": "2025-12-09T08:45:00Z"
+  },
+  {
+    "id": "as_005",
+    "source": "app_store",
+    "text": "Algorithm feels stuck. Same artists in every playlist. I actively search for new genres but recommendations don't adapt.",
+    "rating": 2.0,
+    "author": "genre_hopper",
+    "timestamp": "2025-12-11T10:00:00Z"
+  },
+  {
+    "id": "ps_005",
+    "source": "play_store",
+    "text": "Navigation is a mess on Android. Too many taps to get to my saved playlists. UX needs work.",
+    "rating": 2.0,
+    "author": "android_user",
+    "timestamp": "2025-12-12T14:20:00Z"
+  },
+  {
+    "id": "rd_005",
+    "source": "reddit",
+    "text": "Passive listening mode is real - I just hit play on Daily Mix and zone out. Wish it surprised me more often.",
+    "rating": null,
+    "author": "r/passive",
+    "timestamp": "2025-12-13T16:00:00Z"
+  },
+  {
+    "id": "tw_005",
+    "source": "twitter",
+    "text": "New feature idea: @Spotify let me set a 'discovery appetite' slider - safe vs adventurous recommendations",
+    "rating": null,
+    "author": "@feature_ideas",
+    "timestamp": "2025-12-14T11:15:00Z"
+  },
+  {
+    "id": "as_006",
+    "source": "app_store",
+    "text": "Spotify keeps playing the same 20 songs on my Discover Weekly 😤 I want NEW artists not the same indie pop over and over!!",
+    "rating": 2.0,
+    "author": "duplicate_user",
+    "timestamp": "2025-12-15T10:30:00Z"
+  }
+]
