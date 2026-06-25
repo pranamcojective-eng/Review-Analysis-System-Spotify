@@ -31,7 +31,10 @@ if "chat_history" not in st.session_state:
 
 
 def run_pipeline():
-    with st.spinner("Running pipeline... (ingestion → processing → LLM analysis → clustering → insights)"):
+    with st.spinner(
+        "Running pipeline... (ingestion → processing → LLM analysis → clustering → insights). "
+        "First run may take 1–2 minutes while the embedding model downloads."
+    ):
         pipeline = ReviewDiscoveryPipeline()
         result = pipeline.run()
         st.session_state.pipeline = pipeline

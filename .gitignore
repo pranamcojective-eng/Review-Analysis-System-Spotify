@@ -8,3 +8,4 @@ output/
 .pytest_cache/
 .idea/
 .vscode/
+.streamlit/secrets.toml
